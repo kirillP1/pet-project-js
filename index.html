@@ -22,6 +22,7 @@
      <script src="./js/parallax-header.js" defer></script>
      <script src="./js/timer.js" defer></script>
      <script src="./js/swiper-slider.js" defer></script>
+     <script src="./js/popup.js" defer></script>
 </head>
 <body>
     
@@ -64,9 +65,16 @@
                     </div>
 				</div>
 			</section>
-
-            <section>
-                gsdg
+            <section class="contact">
+                <div class="contact__img-wrapper">
+                    <div class="contact__img" style="background-image: url(img/guitar-about.jpg);"></div>
+                </div>
+                <div class="contact__text-wrapper">
+                    <div class="contact__title">О нас</div>
+                    <p class="contact__text">В нашем каталоге вы найдете гитары различных типов и стилей: акустические, электроакустические, электрические, классические, бас-гитары и многое другое. Мы работаем только с проверенными поставщиками, чтобы гарантировать высокое качество продукции.</p>
+                    <p class="contact__text">Наша команда профессиональных консультантов всегда готова помочь вам с выбором гитары и ответить на все ваши вопросы. Мы стремимся предоставить нашим клиентам лучший сервис и обеспечить полное удовлетворение от покупки.</p>
+                    <button class="contact__all-button all-button"><span>Связаться с нами</span></button>
+                </div>
             </section>
             <section class="slider">
                 <h2 class="slider__header">Наши товары</h2>
@@ -116,16 +124,40 @@
                     <div class="slider__buttons swiper-button-prev"></div>
                 </div>
                 <div class="slider__all-button-wrapper">
-                    <a href="#" class="slider__all-button"><span>Показать все</span></a>
+                    <a href="#" class="slider__all-button all-button"><span>Показать все</span></a>
                 </div>
                 
             </section>
             
 
+            
 		</div>
 	</div>
 
-    
+    <div class="popup">
+        <div class="popup__container">
+            <div class="popup__close-btn"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 50 50">
+                <path d="M 25 2 C 12.309534 2 2 12.309534 2 25 C 2 37.690466 12.309534 48 25 48 C 37.690466 48 48 37.690466 48 25 C 48 12.309534 37.690466 2 25 2 z M 25 4 C 36.609534 4 46 13.390466 46 25 C 46 36.609534 36.609534 46 25 46 C 13.390466 46 4 36.609534 4 25 C 4 13.390466 13.390466 4 25 4 z M 32.990234 15.986328 A 1.0001 1.0001 0 0 0 32.292969 16.292969 L 25 23.585938 L 17.707031 16.292969 A 1.0001 1.0001 0 0 0 16.990234 15.990234 A 1.0001 1.0001 0 0 0 16.292969 17.707031 L 23.585938 25 L 16.292969 32.292969 A 1.0001 1.0001 0 1 0 17.707031 33.707031 L 25 26.414062 L 32.292969 33.707031 A 1.0001 1.0001 0 1 0 33.707031 32.292969 L 26.414062 25 L 33.707031 17.707031 A 1.0001 1.0001 0 0 0 32.990234 15.986328 z"></path>
+                </svg></div>
+            <div class="popup__form">
+                <h3 class="popup__title">Заявка</h3>
+                <form action="">
+                    <div class="popup__form-element">
+                        <input type="text" id="name" placeholder="Введите имя">
+                    </div>
+                    <div class="popup__form-element">
+                        <input type="tel" id="tel" placeholder="Введите телефон">
+                    </div>
+                    <div class="popup__form-element">
+                        <input type="email" id="email" placeholder="Введите e-mail">
+                    </div>
+                    <div class="popup__form-element">
+                        <button  class="all-button">Отправить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
    
 </body>
