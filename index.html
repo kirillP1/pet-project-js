@@ -6,11 +6,29 @@
     <title>Main</title>
 
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./libs/swiper/swiper-bundle.min.css">
+
+     <!--GSAP-->
+     <script src="./libs/gsap/gsap.min.js" defer></script>
+     <script src="./libs/gsap/ScrollSmoother.min.js" defer></script>
+     <script src="./libs/gsap/ScrollTrigger.min.js" defer></script>
+     <!--Particles-->
+     <script src="./libs/particles/particles.js" defer></script>
+     <!--Swiper-->
+     <script src="./libs/swiper/swiper-bundle.min.js" defer></script>
+     <script src="./libs/swiper/swiper-bundle.min.js.map" defer></script>
+     <!--Scripts-->
+     <script src="./js/index.js" defer></script>
+     <script src="./js/parallax-header.js" defer></script>
+     <script src="./js/timer.js" defer></script>
+     <script src="./js/swiper-slider.js" defer></script>
 </head>
 <body>
-    <div class="wrapper">
-		<div class="content">
+    
 
+
+    <div class="wrapper ">
+		<div class="content">
 			<header class="main-header">
 				<div class="layers">
 					<div class="layer__header">
@@ -47,16 +65,68 @@
 				</div>
 			</section>
 
+            <section>
+                gsdg
+            </section>
+            <section class="slider">
+                <h2 class="slider__header">Наши товары</h2>
+                <div class="swiper slider-j">
+                    <div class="swiper-wrapper slider__wrapper">
+            
+                        <div class="swiper-slide slider__item">
+                            <div class="slider__layer" data-swiper-parallax="55%" style="background-image: url(./img/screen/layer-back-1.jpg);"></div>
+                            <div class="slider__layer" data-swiper-parallax="45%" style="background-image: url(./img/screen/layer-middle-1.png);"></div>
+                            <div class="slider__layer" data-swiper-parallax="35%" style="background-image: url(./img/screen-1/layer-front-1.png);"></div>
+                            <canvas class="particles slider__layer" data-swiper-parallax="30%" data-color="#BE9164"></canvas>
+                            <div class="slider__layer slider__text-wrapper" data-swiper-parallax="25%">
+                                <div class="slider__text">
+                                    <div class="slider__title">FENDER SQUIER BULLET MUSTANG HH Imperial Blue</div>
+                                    <div class="slider__caption"> 30000₽</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slider__item">
+                            <div class="slider__layer" data-swiper-parallax="55%" style="background-image: url(./img/screen/layer-back-1.jpg);"></div>
+                            <div class="slider__layer" data-swiper-parallax="45%" style="background-image: url(./img/screen/layer-middle-1.png);"></div>
+                            <div class="slider__layer" data-swiper-parallax="35%" style="background-image: url(./img/screen-2/layer-front-1.png);"></div>
+                            <canvas class="particles slider__layer" data-swiper-parallax="30%" data-color="#BE9164"></canvas>
+                            <div class="slider__layer slider__text-wrapper" data-swiper-parallax="25%">
+                                <div class="slider__text">
+                                    <div class="slider__title">Cort CR250-TBK Classic Rock</div>
+                                    <div class="slider__caption"> 49390₽</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slider__item">
+                            <div class="slider__layer" data-swiper-parallax="55%" style="background-image: url(./img/screen/layer-back-1.jpg);"></div>
+                            <div class="slider__layer" data-swiper-parallax="45%" style="background-image: url(./img/screen/layer-middle-1.png);"></div>
+                            <div class="slider__layer" data-swiper-parallax="35%" style="background-image: url(./img/screen-3/layer-front-1.png);"></div>
+                            <canvas class="particles slider__layer" data-swiper-parallax="30%" data-color="#BE9164"></canvas>
+                            <div class="slider__layer slider__text-wrapper" data-swiper-parallax="25%">
+                                <div class="slider__text">
+                                    <div class="slider__title">EART YMS-SG3 Trans Tobacco Burst</div>
+                                    <div class="slider__caption"> 37000₽</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+            
+                    </div>
+                    <div class="slider__buttons swiper-button-next"></div>
+                    <div class="slider__buttons swiper-button-prev"></div>
+                </div>
+                <div class="slider__all-button-wrapper">
+                    <a href="#" class="slider__all-button"><span>Показать все</span></a>
+                </div>
+                
+            </section>
+            
+
 		</div>
 	</div>
 
-
     
-    <script src="./libs/gsap/gsap.min.js"></script>
-    <script src="./libs/gsap/ScrollSmoother.min.js"></script>
-    <script src="./libs/gsap/ScrollTrigger.min.js"></script>
-    <script src="./js/index.js"></script>
-    <script src="./js/parallax-header.js"></script>
-    <script src="./js/timer.js"></script>
+
+   
 </body>
 </html>
