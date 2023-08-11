@@ -2,11 +2,17 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.5);
 }
 :root {
 	--index: calc(1vw + 1vh);
 	--text: #e7e7e0;
 	--transition: transform .75s cubic-bezier(.075, .5, 0, 1);
+    --color-yellow: #9d822b;
+    --color-pink: #D726E0;
+    --color-turquoise: #53E0C4;
+
 }
 @font-face {
 	font-family: raleway_f;
@@ -22,6 +28,24 @@ body {
 	font-family: raleway_f, sans-serif;
 	line-height: 1.55;
 }
+
+  
+/* Работает в Chrome, Edge и Safari */
+*::-webkit-scrollbar {
+    width: 12px;
+}
+  
+*::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.5);
+}
+  
+*::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.486);
+    border-radius: 20px;
+}
+/*************************************
+****************HEADER******************
+************************************/
 .main-header {
 	position: relative;
 }
@@ -74,7 +98,7 @@ body {
 	text-transform: uppercase;
 	font-weight: 900;
 	color: var(--text);
-	text-shadow: 0 0 15px #9d822b;
+	text-shadow: 0 0 15px var(--color-yellow);
     margin-bottom: 20vw;
 }
 .layers__title {
@@ -86,9 +110,13 @@ body {
 	letter-spacing: calc(var(--index) / 3.5);
 	margin-top: calc(var(--index) * -.75);
 }
-.main-article {
-	--main-article-transform: translate3d(0, calc(var(--scrollTop) / -7.5), 0);
-	min-height: 100vh;
+/*************************************
+****************COUNTDOWN******************
+************************************/
+.countdown{
+	/*--main-article-transform: translate3d(0, calc(var(--scrollTop) / -7.5), 0);
+	min-height: 100vh;*/
+    padding: 20vh 0;
 	background-size: cover;
 	background-position: center;
 	color: var(--text);
@@ -102,21 +130,38 @@ body {
 	z-index: 10;
     background-color: #010101;
 }
-.main-article__header {
+.countdown__header {
 	text-transform: uppercase;
 	font-size: calc(var(--index) * 1.8);
 	letter-spacing: calc(var(--index) / 7.5);
 	transform: var(--main-article-transform);
 	transition: var(--transition);
 	will-change: transform;
+    text-shadow: 0 0 15px var(--color-turquoise);
 }
-.main-article__paragraph {
-	max-width: calc(var(--index) * 30);
+.countdown__paragraph {
+	/*max-width: calc(var(--index) * 30);*/
 	font-size: calc(var(--index) * .9);
 	margin-top: calc(var(--index) / 1.25);
 	transform: var(--main-article-transform);
 	transition: var(--transition);
 	will-change: transform;
+    display: flex;
+    align-items: center;
+	justify-content: center;
+
+}
+.countdown__time{
+    margin: 10px;
+    text-shadow: 0 0 15px var(--color-pink);
+
+}
+.countdown__time p{
+    font-size: calc(var(--index) * 1.8);
+
+}
+.countdown__time small{
+
 }
 .content {
 	will-change: transform;
@@ -128,3 +173,13 @@ body {
 	font-size: calc(var(--index) * .75);
 	letter-spacing: calc(var(--index) / 37.5);
 }
+@media screen and (max-width: 767px) {
+    .countdown__paragraph {
+        font-size: calc(var(--index) * 1.9);
+    }
+    .countdown__time p {
+        font-size: calc(var(--index) * 3.8);
+    }
+}
+
+
