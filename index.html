@@ -23,6 +23,7 @@
      <script src="./js/timer.js" defer></script>
      <script src="./js/swiper-slider.js" defer></script>
      <script src="./js/popup.js" defer></script>
+     <script src="./js/calc.js" defer></script>
 </head>
 <body>
     
@@ -44,7 +45,7 @@
 		
 			<section class="countdown">
 				<div class="countdown__content">
-					<h2 class="countdown__header">Скидки до 50%! До конца акции:</h2>
+					<h2 class="countdown__header header">Скидки до 50%! До конца акции:</h2>
 					<div class="countdown__paragraph" id="countdown__paragraph">
                         <div class="countdown__time">
                             <p id="days">00</p>
@@ -77,7 +78,7 @@
                 </div>
             </section>
             <section class="slider">
-                <h2 class="slider__header">Наши товары</h2>
+                <h2 class="slider__header header">Наши товары</h2>
                 <div class="swiper slider-j">
                     <div class="swiper-wrapper slider__wrapper">
             
@@ -128,7 +129,364 @@
                 </div>
                 
             </section>
-            
+            <section class="calc" id="calc">
+                <div class="calc__wrapper">
+                    <h2 class="calc__header header">Соберите свою гитару!</h2>
+                    <form id="form">
+
+                        <div class="calc__section calc__section-active">
+                            <p class="calc__checkbox-wrapper calc__checkbox-wrapper-type">Тип гитары</p>
+                            <div class="calc_label-wrapper">
+                                <label class="calc__radio-wrapper-type calc__radio-wrapper-type-active" data-name="mobile">
+                                    <input type="radio" class="calc__radio" name="type" value="10000" checked/>
+                                    <img src="./img/S-custom.png">
+                                    <div class="calc__title-lite">S Model</div>
+    
+                                </label>
+                                <label class="calc__radio-wrapper-type" data-name="mobile">
+                                    <input type="radio" class="calc__radio" name="type" value="15000"  />
+                                    <img src="./img/S-custom.png">
+                                    <div class="calc__title-lite">F Model</div>
+                                </label>
+                                <label class="calc__radio-wrapper-type" data-name="mobile">
+                                    <input type="radio" class="calc__radio" name="type" value="16000"  />
+                                    <img src="./img/T-custom.png">
+                                    <div class="calc__title-lite">T Model</div>
+                                </label>
+                                <label class="calc__radio-wrapper-type" data-name="mobile">
+                                    <input type="radio" class="calc__radio" name="type" value="12000"  />
+                                    <img src="./img/MT-custom.png">
+                                    <div class="calc__title-lite">ModernTele</div>
+                                </label>
+                                <label class="calc__radio-wrapper-type" data-name="mobile">
+                                    <input type="radio" class="calc__radio" name="type" value="18000"  />
+                                    <img src="./img/D-custom.png">
+                                    <div class="calc__title-lite">Dominator 6</div>
+                                </label>
+                                <label class="calc__radio-wrapper-type" data-name="mobile">
+                                    <input type="radio" class="calc__radio" name="type" value="11000"  />
+                                    <img src="./img/DT-custom.png">
+                                    <div class="calc__title-lite">Dominator T 6</div>
+                                </label>
+                                <label class="calc__radio-wrapper-type" data-name="mobile">
+                                    <input type="radio" class="calc__radio" name="type" value="9000"  />
+                                    <img src="./img/G-custom.png">
+                                    <div class="calc__title-lite">Gravity 6</div>
+                                </label>
+                                <label class="calc__radio-wrapper-type" data-name="mobile">
+                                    <input type="radio" class="calc__radio" name="type" value="8000"  />
+                                    <img src="./img/E-custom.png">
+                                    <div class="calc__title-lite">Element 6</div>
+                                </label>
+                                
+                            </div>
+                        </div>
+    
+                        <!-- Мобильная адаптивность -->
+                        <div class="calc__section ">
+                            <div class="calc__section-radio">
+                                <div class="calc__item">
+                                    <p class="calc__checkbox-wrapper"> Материал грифа </p>
+                                    <label class="calc__radio-wrapper">
+                                        <input type="radio" class="calc__radio" name="materials" value="1" checked />
+                                        <span class="calc__check-custom"></span>
+                                        <div class="calc__title-lite">Клен</div>
+                                    </label>
+                                    <label class="calc__radio-wrapper">
+                                        <input type="radio" class="calc__radio" name="materials" value="1.1" />
+                                        <span class="calc__check-custom"></span>
+                                        <div class="calc__title-lite">Клен термостабилизированный (Roasted)</div>
+                                    </label>
+                                    <label class="calc__radio-wrapper">
+                                        <input type="radio" class="calc__radio" name="materials" value="1.2" />
+                                        <span class="calc__check-custom"></span>
+                                        <div class="calc__title-lite">Махагон</div>
+                                    </label>
+                                    <label class="calc__radio-wrapper">
+                                        <input type="radio" class="calc__radio" name="materials" value="1.3" />
+                                        <span class="calc__check-custom"></span>
+                                        <div class="calc__title-lite">Индивидуальный заказ</div>
+                                    </label>
+                                </div>
+                                <div class="calc__item">
+                                    <p class="calc__checkbox-wrapper"> Материал накладки</p>
+                                    <label class="calc__radio-wrapper">
+                                        <input type="radio" class="calc__radio" name="materials-nak" value="1" checked />
+                                        <span class="calc__check-custom"></span>
+                                        <div class="calc__title-lite">
+                                            Без накладки
+                                        </div>
+                                    </label>
+                                    <label class="calc__radio-wrapper">
+                                        <input type="radio" class="calc__radio" name="materials-nak" value="1.1" />
+                                        <span class="calc__check-custom"></span>
+                                        <div class="calc__title-lite">
+                                            Палисандр
+                                        </div>
+                                    </label>
+                                    <label class="calc__radio-wrapper">
+                                        <input type="radio" class="calc__radio" name="materials-nak" value="1.2" />
+                                        <span class="calc__check-custom"></span>
+                                        <div class="calc__title-lite">
+                                            Пао ферро
+                                        </div>
+                                    </label>
+                                    <label class="calc__radio-wrapper">
+                                        <input type="radio" class="calc__radio" name="materials-nak" value="1.3" />
+                                        <span class="calc__check-custom"></span>
+                                        <div class="calc__title-lite">
+                                            Макассар
+                                        </div>
+                                    </label>
+                                    <label class="calc__radio-wrapper">
+                                        <input type="radio" class="calc__radio" name="materials-nak" value="1.15" />
+                                        <span class="calc__check-custom"></span>
+                                        <div class="calc__title-lite">
+                                            Эбен
+                                        </div>
+                                    </label>
+                                    <label class="calc__radio-wrapper">
+                                        <input type="radio" class="calc__radio" name="materials-nak" value="1.35" />
+                                        <span class="calc__check-custom"></span>
+                                        <div class="calc__title-lite">
+                                            Белый "лунный" эбен
+                                        </div>
+                                    </label>
+                                    <label class="calc__radio-wrapper">
+                                        <input type="radio" class="calc__radio" name="materials-nak" value="1.23" />
+                                        <span class="calc__check-custom"></span>
+                                        <div class="calc__title-lite">
+                                            Индивидуальный заказ
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="calc__item">
+                                    <p class="calc__checkbox-wrapper"> Материал корпуса</p>
+                                    <label class="calc__radio-wrapper">
+                                        <input type="radio" class="calc__radio" name="materials-korp" value="1" checked />
+                                        <span class="calc__check-custom"></span>
+                                        <div class="calc__title-lite">Ольха</div>
+                                    </label>
+                                    <label class="calc__radio-wrapper">
+                                        <input type="radio" class="calc__radio" name="materials-korp" value="1.05"  />
+                                        <span class="calc__check-custom"></span>
+                                        <div class="calc__title-lite">
+                                            Махагон африканский</div>
+                                    </label>
+                                    <label class="calc__radio-wrapper">
+                                        <input type="radio" class="calc__radio" name="materials-korp" value="1.2" />
+                                        <span class="calc__check-custom"></span>
+                                        <div class="calc__title-lite">Махагон южноамериканский</div>
+                                    </label>
+                                    <label class="calc__radio-wrapper">
+                                        <input type="radio" class="calc__radio" name="materials-korp" value="1.1"  />
+                                        <span class="calc__check-custom"></span>
+                                        <div class="calc__title-lite">Ясень болотный</div>
+                                    </label>
+                                    <label class="calc__radio-wrapper">
+                                        <input type="radio" class="calc__radio" name="materials-korp" value="1.2"  />
+                                        <span class="calc__check-custom"></span>
+                                        <div class="calc__title-lite">Черная лимба</div>
+                                    </label>
+                                    <label class="calc__radio-wrapper">
+                                        <input type="radio" class="calc__radio" name="materials-korp" value="1.3"  />
+                                        <span class="calc__check-custom"></span>
+                                        <div class="calc__title-lite">Индивидуальный заказ</div>
+                                    </label>
+                                </div>
+                                <div class="calc__item">
+                                    <p class="calc__checkbox-wrapper"> Крышка электроники</p>
+                                    <label class="calc__radio-wrapper">
+                                        <input type="radio" class="calc__radio" name="roof" value="1" checked />
+                                        <span class="calc__check-custom"></span>
+                                        <div class="calc__title-lite">
+                                            Пластик</div>
+                                    </label>
+                                    <label class="calc__radio-wrapper">
+                                        <input type="radio" class="calc__radio" name="roof" value="1.1"  />
+                                        <span class="calc__check-custom"></span>
+                                        <div class="calc__title-lite">
+                                            Дерево</div>
+                                    </label>
+                                </div>
+                                <div class="calc__item">
+                                    <p class="calc__checkbox-wrapper"> Покрытие</p>
+                                    <label class="calc__radio-wrapper">
+                                        <input type="radio" class="calc__radio" name="pokrit" value="1" checked />
+                                        <span class="calc__check-custom"></span>
+                                        <div class="calc__title-lite">
+                                            Тонкое матовое</div>
+                                    </label>
+                                    <label class="calc__radio-wrapper">
+                                        <input type="radio" class="calc__radio" name="pokrit" value="1.1"/>
+                                        <span class="calc__check-custom"></span>
+                                        <div class="calc__title-lite">
+                                            Масло</div>
+                                    </label>
+                                    <label class="calc__radio-wrapper">
+                                        <input type="radio" class="calc__radio" name="pokrit" value="1.05"/>
+                                        <span class="calc__check-custom"></span>
+                                        <div class="calc__title-lite">
+                                            Глянец</div>
+                                    </label>
+                                </div>
+                                <div class="calc__item">
+                                    <p class="calc__checkbox-wrapper"> Цвет фурнитуры</p>
+                                    <label class="calc__radio-wrapper">
+                                        <input type="radio" class="calc__radio" name="color-fur" value="1" checked />
+                                        <span class="calc__check-custom"></span>
+                                        <div class="calc__title-lite">
+                                            Хром</div>
+                                    </label>
+                                    <label class="calc__radio-wrapper">
+                                        <input type="radio" class="calc__radio" name="color-fur" value="1.1" />
+                                        <span class="calc__check-custom"></span>
+                                        <div class="calc__title-lite">
+                                            Чёрный</div>
+                                    </label>
+                                    <label class="calc__radio-wrapper">
+                                        <input type="radio" class="calc__radio" name="color-fur" value="1.06"  />
+                                        <span class="calc__check-custom"></span>
+                                        <div class="calc__title-lite">
+                                            Золотой</div>
+                                    </label>
+                                </div>
+                                <div class="calc__item">
+                                    <p class="calc__checkbox-wrapper">Конфигурация звукоснимателей</p>
+                                    <label class="calc__radio-wrapper">
+                                        <input type="radio" class="calc__radio" name="sound-conf" value="1" checked />
+                                        <span class="calc__check-custom"></span>
+                                        <div class="calc__title-lite">
+                                            HS</div>
+                                    </label>
+                                    <label class="calc__radio-wrapper">
+                                        <input type="radio" class="calc__radio" name="sound-conf" value="1.05" />
+                                        <span class="calc__check-custom"></span>
+                                        <div class="calc__title-lite">
+                                            HSS</div>
+                                    </label>
+                                    <label class="calc__radio-wrapper">
+                                        <input type="radio" class="calc__radio" name="sound-conf" value="1.1"  />
+                                        <span class="calc__check-custom"></span>
+                                        <div class="calc__title-lite">
+                                            SSS</div>
+                                    </label>
+                                    <label class="calc__radio-wrapper">
+                                        <input type="radio" class="calc__radio" name="sound-conf" value="1.04" />
+                                        <span class="calc__check-custom"></span>
+                                        <div class="calc__title-lite">
+                                            HH</div>
+                                    </label>
+                                    <label class="calc__radio-wrapper">
+                                        <input type="radio" class="calc__radio" name="sound-conf" value="1.2"/>
+                                        <span class="calc__check-custom"></span>
+                                        <div class="calc__title-lite">
+                                            HSH</div>
+                                    </label>
+                                </div>
+                                <div class="calc__item">
+                                    <p class="calc__checkbox-wrapper">Тип бриджа</p>
+                                    <label class="calc__radio-wrapper">
+                                        <input type="radio" class="calc__radio" name="bridge-type" value="1" checked />
+                                        <span class="calc__check-custom"></span>
+                                        <div class="calc__title-lite">
+                                            Фиксированный Hipshot</div>
+                                    </label>
+                                    <label class="calc__radio-wrapper">
+                                        <input type="radio" class="calc__radio" name="bridge-type" value="1.05" />
+                                        <span class="calc__check-custom"></span>
+                                        <div class="calc__title-lite">
+                                            Tremolo Gotoh 510TS на корпусе</div>
+                                    </label>
+                                    <label class="calc__radio-wrapper">
+                                        <input type="radio" class="calc__radio" name="bridge-type" value="1.02" />
+                                        <span class="calc__check-custom"></span>
+                                        <div class="calc__title-lite">
+                                            Tremolo Gotoh 510TS (recessed)</div>
+                                    </label>
+                                    <label class="calc__radio-wrapper">
+                                        <input type="radio" class="calc__radio" name="bridge-type" value="1.5" />
+                                        <span class="calc__check-custom"></span>
+                                        <div class="calc__title-lite">
+                                            Non-Fine Tuner Tremolo System</div>
+                                    </label>
+                                    <label class="calc__radio-wrapper">
+                                        <input type="radio" class="calc__radio" name="bridge-type" value="1.2" />
+                                        <span class="calc__check-custom"></span>
+                                        <div class="calc__title-lite">
+                                            Tremolo 1996T</div>
+                                    </label>
+                                    <label class="calc__radio-wrapper">
+                                        <input type="radio" class="calc__radio" name="bridge-type" value="1.02" />
+                                        <span class="calc__check-custom"></span>
+                                        <div class="calc__title-lite">
+                                            Original Floyd Rose</div>
+                                    </label>
+                                </div>
+                                <div class="calc__item">
+                                    <p class="calc__checkbox-wrapper">Материал топа</p>
+                                    <label class="calc__radio-wrapper">
+                                        <input type="radio" class="calc__radio" name="materials-top" value="1" checked />
+                                        <span class="calc__check-custom"></span>
+                                        <div class="calc__title-lite">
+                                            Без топа</div>
+                                    </label>
+                                    <label class="calc__radio-wrapper">
+                                        <input type="radio" class="calc__radio" name="materials-top" value="1.04" />
+                                        <span class="calc__check-custom"></span>
+                                        <div class="calc__title-lite">
+                                            Ясень книжка</div>
+                                    </label>
+                                    <label class="calc__radio-wrapper">
+                                        <input type="radio" class="calc__radio" name="materials-top" value="1.2" />
+                                        <span class="calc__check-custom"></span>
+                                        <div class="calc__title-lite">
+                                            Клен простой</div>
+                                    </label>
+                                    <label class="calc__radio-wrapper">
+                                        <input type="radio" class="calc__radio" name="materials-top" value="1.05" />
+                                        <span class="calc__check-custom"></span>
+                                        <div class="calc__title-lite">
+                                            Клен пламенный книжка 4А</div>
+                                    </label>
+                                    <label class="calc__radio-wrapper">
+                                        <input type="radio" class="calc__radio" name="materials-top" value="1.2" />
+                                        <span class="calc__check-custom"></span>
+                                        <div class="calc__title-lite">
+                                            Клен пламенный книжка 5А</div>
+                                    </label>
+                                    <label class="calc__radio-wrapper">
+                                        <input type="radio" class="calc__radio" name="materials-top" value="1.1" />
+                                        <span class="calc__check-custom"></span>
+                                        <div class="calc__title-lite">
+                                            Орех книжка</div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="calc__button-wrapper">
+                                <button class="contact__all-button all-button"><span>Связаться с нами</span></button>
+                            </div>
+                            
+                        </div>
+                        
+                        <!-- Стоимость ремонта -->
+                        <div class="calc__footer">
+                            <div class="calc__price">
+                                <div class="calc__price-title">Стоимость ремонта:</div>
+                                <div class="calc__price-value">
+                                    <span id="total-price">0</span>
+                                    рублей
+                                </div>
+                            </div>
+                            <div class="calc__sub">
+                                <a href="#" class="calc__prev-button all-button">Назад</a>
+                                <a href="#" class="calc__next-button all-button">Далее</a>
+                            </div>
+                        </div>
+                        <!-- // Стоимость ремонта -->
+                    </form>
+                </div>
+            </section>
 
             
 		</div>
