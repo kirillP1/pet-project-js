@@ -20,6 +20,9 @@ const prevBtn = document.querySelector('.calc__prev-button')
 const nextBtn = document.querySelector('.calc__next-button')
 const calcSections = document.querySelectorAll('.calc__section')
 
+
+
+
 /*******TOTAL-PRICE */
 let countPrice = 0
 for (const radio of radioType){
