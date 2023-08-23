@@ -1,0 +1,30 @@
+[
+	{
+		"id": 1,
+		"title": "EART YMS-SG3 Trans Tobacco Burst",
+		"counter": 1,
+		"price": 37000,
+		"imgSrc": "./img/products/EART YMS-SG3 Trans Tobacco Burst.png"
+	},
+	{
+		"id": 2,
+		"title": "IBANEZ GRGM21M-CA",
+		"counter": 1,
+		"price": 26350,
+		"imgSrc": "./img/products/IBANEZ GRGM21M-CA.png"
+	},
+	{
+		"id": 3,
+		"title": "IBANEZ GRG121DX-BKF",
+		"counter": 1,
+		"price": 30000,
+		"imgSrc": "./img/products/IBANEZ GRG121DX-BKF.png"
+	},
+	{
+		"id": 4,
+		"title": "FENDER SQUIER BULLET MUSTANG HH Imperial Blue",
+		"counter": 1,
+		"price": 32000,
+		"imgSrc": "./img/products/FENDER SQUIER BULLET MUSTANG HH Imperial Blue.png"
+	}
+]

@@ -201,6 +201,7 @@ body {
 }
 .countdown__all-button {
 	margin: 5vh 0;
+	display: inline-block;
 }
 .content {
 	will-change: transform;
@@ -1059,4 +1060,134 @@ footer {
 .preloader__load {
 	opacity: 0;
 	z-index: -1;
+}
+
+/************************************************************
+**********************SHOP**************************
+*************************************/
+.shop {
+	display: flex;
+	color: var(--text);
+	max-width: 1140px;
+	margin: 0 auto;
+	padding: 10vh 0;
+}
+.shop__products-container {
+	width: 75%;
+	display: flex;
+	flex-wrap: wrap;
+}
+.shop__card-container {
+	width: 25%;
+}
+.shop__product-wrapper {
+	width: 50%;
+	padding: 0px 15px;
+	margin-bottom: 5vh;
+}
+.shop__product {
+	text-align: center;
+	background-color: #252525;
+	border-radius: 5px;
+	padding: 4vh 2vw;
+	height: 100%;
+}
+.shop__details-wrapper,
+.cart-item__details {
+	display: flex;
+}
+.shop__items,
+.counter-wrapper {
+	flex: 1;
+	background-color: #1f1f1f;
+	background-repeat: 8px;
+	display: flex;
+}
+.shop__price,
+.price {
+	flex: 1;
+	height: 40px;
+}
+.shop__items-control,
+.items__control {
+	flex: 1;
+	cursor: pointer;
+	text-align: center;
+	transition: all var(--transition);
+	justify-content: center;
+	align-items: center;
+	display: flex;
+}
+.shop__items-control:hover,
+.items__control:hover {
+	background: var(--color-turquoise);
+	box-shadow: 0 0 35px var(--color-turquoise);
+}
+.shop__items-current,
+.items__current {
+	flex: 1;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+}
+.shop__product .all-button {
+	margin-top: 3vh;
+	width: 100%;
+	font-size: calc(var(--index) * 0.9);
+	letter-spacing: calc(var(--index) / 4);
+}
+.shop__item-title {
+	margin: 3vh 0;
+	font-size: calc(var(--index) * 0.8);
+	letter-spacing: calc(var(--index) / 4);
+}
+.shop__price-currency,
+.price__currency {
+	font-size: calc(var(--index) * 0.7);
+	letter-spacing: calc(var(--index) / 4);
+	text-align: right;
+}
+.shop__product-img {
+	width: 100%;
+}
+.shop__card {
+	background-color: #252525;
+	padding: 4vh 2vw;
+}
+.shop__card-total {
+	border-top: 1px solid #1f1f1f;
+	padding: 2vh 0;
+}
+.shop__alert {
+	padding-bottom: 2vh;
+}
+.shop__border-top {
+	border-top: 1px solid #1f1f1f;
+	padding: 2vh 0;
+}
+.shop__card-body .all-button {
+	font-size: calc(var(--index) * 0.7);
+	width: 100%;
+}
+.shop__card-body .all-button:hover {
+	letter-spacing: calc(var(--index) / 4);
+}
+.shop__form-control {
+	padding: 2vh 1vw;
+	width: 100%;
+	margin: 2vh 0px;
+	outline: none;
+}
+
+/************************************************
+*****************CART_ITEM****************
+******************************/
+.cart-item {
+	margin-top: 20px;
+}
+.cart-item__img img {
+	width: 100%;
+}
+.cart-item__details {
+	margin: 10px 0;
 }
