@@ -4,10 +4,11 @@ async function getProducts() {
 	const response = await fetch('./js/posts/products.json')
 	const productsArray = await response.json()
 	console.log(response)
-	await renderProducts(productsArray)
+	renderProducts(productsArray)
 }
-async function renderProducts(productsArray) {
-	const productsHTML = await productsArray.map(product => {
+getProducts()
+function renderProducts(productsArray) {
+	const productsHTML = productsArray.map(product => {
 		return `<div class="shop__product-wrapper" data-id='${product.id}'>
 				<div class="shop__product" >
 						<img src="${product.imgSrc}"
@@ -37,7 +38,4 @@ async function renderProducts(productsArray) {
 		</div>`
 	})
 	productsContainer.innerHTML += productsHTML.join('')
-	console.log(productsHTML)
 }
-
-getProducts()

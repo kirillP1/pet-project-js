@@ -1,6 +1,6 @@
 const addCartBtns = document.querySelectorAll('.shop__all-button')
 const cartWrapper = document.querySelector('.shop__cart-wrapper')
-
+console.log('c')
 updateBtn()
 
 addCartBtns.forEach(btn => {
